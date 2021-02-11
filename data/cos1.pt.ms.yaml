@@ -1,0 +1,20 @@
+---
+rel_postfix::manage_install: true
+rel_postfix::manage_service: true
+rel_postfix::ensure_service: 'running'
+rel_postfix::enable_service: true
+rel_postfix::manage_maincf:  true
+
+#main.cf:
+#rel_postfix::smtpd_banner: 
+#rel_postfix::myhostname:
+rel_postfix::mydestination: [10.10.1.1] #This is intentionally left blank
+rel_postfix::mynetworks:
+  - '127.0.0.0/8'
+  - '[::1]/128'
+rel_postfix::inet_interfaces: 'loopback-only'
+rel_postfix::inet_protocols: 'ipv4'
+rel_postfix::mydomain: 'scb.ms'
+rel_postfix::local_transport: "Error: This is null client"
+rel_postfix::relayhost: '[sendmail.pt.ms]'
+rel_postfix::dns_native_lookup_enable: true

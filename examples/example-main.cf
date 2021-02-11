@@ -1,0 +1,15 @@
+cat /etc/postfix/main.cf
+# postfix main.cf - managed by puppet
+# Strictly no manual changes of main.cf
+myorigin = cos1.pt.ms
+myhostname = cos1.pt.ms
+smtpd_banner = cos1.pt.ms ESMTP
+mydestination =
+mynetworks = 127.0.0.0/8, [::ffff:127.0.0.0]/104, [::1]/128
+inet_interfaces = loopback-only
+inet_protocols = ipv4
+relayhost = [sendmail.pt.ms]
+mydomain = pt.ms
+smtp_dns_support_level = enabled
+smtp_host_lookup = dns, native
+

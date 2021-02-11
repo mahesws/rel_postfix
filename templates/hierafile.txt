@@ -1,0 +1,19 @@
+  $manage_install = $::rel_postfix::manage_install
+  $manage_service = $::rel_postfix::manage_service
+  $install_source = $::rel_postfix::install_source
+  $package_name = $::rel_postfix::package_name
+
+  $manage_service = $::rel_postfix::manage_service
+  $ensure_service = $::rel_postfix::ensure_service
+  $enable_service = $::rel_postfix::enable_service
+  $service_name = $::rel_postfix::install::service_name
+  
+  $smtpd_banner = $::rel_postfix::smtpd_banner,
+  $myhostname = $::rel_postfix::myhostname,
+  $myorigin = $::rel_postfix::myorigin,
+  $inet_interfaces = $::rel_postfix::inet_interfaces,
+  $inet_protocols = $::rel_postfix::inet_protocols,
+  $mydestination = $::rel_postfix::mydestination,
+  $mynetworks = $::rel_postfix::mynetworks,
+  $mydomain = $::rel_postfix::mydomain,
+  $relayhost = $::rel_postfix::relayhost

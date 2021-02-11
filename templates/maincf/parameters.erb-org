@@ -1,0 +1,11 @@
+myorigin = <%= @myorigin %>
+myhostname = <%= @myhostname %>
+smtpd_banner = <%= @smtpd_banner %>
+mydestination = <%= @mydestination.join(', ') %>
+mynetworks = <%= @mynetworks.join(', ') %>
+inet_interfaces = <%= @inet_interfaces %>
+inet_protocols = <%= @inet_protocols %>
+relayhost = <%= @relayhost %>
+mydomain = <%= @mydomain %>
+#local_transport = <%= @local_transport %>
+disable_dns_lookups = <%= @disable_dns_lookups %>
